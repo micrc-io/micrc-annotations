@@ -27,11 +27,10 @@ repositories {
 dependencies {
 }
 
+// 执行publishToMavenLocal后，其他库可正常引入
 publishing {
     publications {
-        //noinspection GroovyAssignabilityCheck
         mavenJava(MavenPublication) {
-            //noinspection GroovyAssignabilityCheck
             from components.java
         }
     }
@@ -40,13 +39,9 @@ publishing {
 nexusPublishing {
     repositories {
         create("colibri") {
-            //noinspection GrUnresolvedAccess
             nexusUrl.set(uri("${colibri_nexus}"))
-            //noinspection GrUnresolvedAccess
             snapshotRepositoryUrl.set(uri("${colibri_nexus}"))
-            //noinspection GrUnresolvedAccess
             username.set("${colibri_nexus_user}")
-            //noinspection GrUnresolvedAccess
             password.set("${colibri_nexus_pass}")
         }
     }
