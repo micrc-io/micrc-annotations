@@ -6,8 +6,8 @@ import java.lang.annotation.*;
  * 命令逻辑
  *
  * @author tengwang
- * @version 1.0.0
  * @date 2022/8/31 14:28
+ * @since 0.0.1
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

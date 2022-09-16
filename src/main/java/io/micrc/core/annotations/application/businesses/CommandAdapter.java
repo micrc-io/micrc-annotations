@@ -6,8 +6,8 @@ import java.lang.annotation.*;
  * 业务服务适配器注解
  *
  * @author tengwang
- * @version 1.0.0
  * @date 2022/9/5 10:45
+ * @since 0.0.1
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
