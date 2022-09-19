@@ -24,4 +24,11 @@ public @interface PresentationsAdapter {
      * @return
      */
     String serviceName();
+
+    /**
+     * 自定义
+     *
+     * @return
+     */
+    boolean custom() default false;
 }

@@ -38,4 +38,11 @@ public @interface DerivationsService {
      * @return
      */
     String assembler();
+
+    /**
+     * 自定义
+     *
+     * @return
+     */
+    boolean custom() default false;
 }
