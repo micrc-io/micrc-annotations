@@ -26,7 +26,7 @@ public @interface MessageAdapter {
      *
      * @return
      */
-    String routeProtocol() default "message-adapter";
+    String routeProtocol() default "message";
 
     /**
      * 应用服务名称 - 类简写名(SimpleName)

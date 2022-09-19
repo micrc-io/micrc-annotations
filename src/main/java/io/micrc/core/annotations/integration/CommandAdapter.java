@@ -27,7 +27,7 @@ public @interface CommandAdapter {
      *
      * @return
      */
-    String routeProtocol() default "command-adapter";
+    String routeProtocol() default "command";
 
     /**
      * 应用服务名称 - 类简写名(SimpleName)
