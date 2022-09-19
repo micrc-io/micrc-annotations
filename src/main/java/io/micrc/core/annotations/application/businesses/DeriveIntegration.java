@@ -26,7 +26,7 @@ public @interface DeriveIntegration {
      *
      * @return
      */
-    int order() default 0;
+    int order() default Integer.MAX_VALUE;
 
     /**
      * 对象图路径
