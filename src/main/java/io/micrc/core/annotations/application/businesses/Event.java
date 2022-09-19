@@ -19,28 +19,28 @@ public @interface Event {
      *
      * @return
      */
-    String name();
+    String eventName();
 
     /**
-     * 接收方名称
+     * 发送聚合名称-类简写名称-ExchangeName
      *
      * @return
      */
-    String reception();
+    String aggregationName();
 
     /**
-     * 对端映射
+     * 接收通道-channel-使用消费方LogicName
      *
      * @return
      */
-    String mapping();
+    String channel();
 
     /**
-     * 事件场景
+     * 对端映射文件地址
      *
      * @return
      */
-    String scene() default "";
+    String mappingPath();
 
     /**
      * 是否顺序发送

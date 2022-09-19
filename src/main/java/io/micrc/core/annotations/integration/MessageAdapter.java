@@ -29,11 +29,18 @@ public @interface MessageAdapter {
     String routeProtocol() default "message";
 
     /**
-     * 应用服务名称 - 类简写名(SimpleName)
+     * 交换区名称 - 发送方根实体名称
      *
      * @return
      */
-    String serviceName();
+    String exchangeName();
+
+    /**
+     * 逻辑名 - 应用服务类简写名(SimpleName)去除Service
+     *
+     * @return
+     */
+    String logicName();
 
     /**
      * 执行根实体
@@ -47,7 +54,7 @@ public @interface MessageAdapter {
      *
      * @return
      */
-    String event();
+    String eventName();
 
     /**
      * 是否顺序消费
