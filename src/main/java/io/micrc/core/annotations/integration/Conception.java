@@ -1,4 +1,4 @@
-package io.micrc.core.annotations.application.businesses;
+package io.micrc.core.annotations.integration;
 
 import java.lang.annotation.*;
 

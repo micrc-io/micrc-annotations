@@ -22,7 +22,7 @@ public @interface TargetMapping {
     String name();
 
     /**
-     * 映射值 - jsonpath
+     * 映射值 - jsonpoint
      *
      * @return
      */

@@ -13,4 +13,17 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Documented
 public @interface BusinessesService {
+    /**
+     * 是否启用自定义实现
+     *
+     * @return
+     */
+    boolean custom() default false;
+
+    /**
+     * 协议类型
+     *
+     * @return
+     */
+    String routeProtocol() default "businesses";
 }
