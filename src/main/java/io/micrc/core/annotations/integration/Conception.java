@@ -26,7 +26,7 @@ public @interface Conception {
      *
      * @return
      */
-    int order() default 0;
+    int order() default Integer.MAX_VALUE;
 
     /**
      * 转换至命令对象内部路径-默认为概念名称在根路径

@@ -31,4 +31,11 @@ public @interface Integration {
      * @return
      */
     String name();
+
+    /**
+     * 参数处理顺序,优化处理速度
+     *
+     * @return
+     */
+    int order() default Integer.MAX_VALUE;
 }
