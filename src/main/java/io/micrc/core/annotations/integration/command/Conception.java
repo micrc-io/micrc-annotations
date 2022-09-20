@@ -1,4 +1,4 @@
-package io.micrc.core.annotations.integration;
+package io.micrc.core.annotations.integration.command;
 
 import java.lang.annotation.*;
 

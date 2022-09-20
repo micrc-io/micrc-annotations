@@ -1,10 +1,6 @@
-package io.micrc.core.annotations.application.derivations;
+package io.micrc.core.annotations.integration.derivation;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * 衍生适配器
@@ -26,9 +22,23 @@ public @interface DerivationsAdapter {
     String serviceName();
 
     /**
+     * 协议类型
+     *
+     * @return
+     */
+    String routeProtocol() default "derivations";
+
+    /**
      * 自定义
      *
      * @return
      */
     boolean custom() default false;
+
+    /**
+     * 对外提供服务的协议文件
+     *
+     * @return
+     */
+    String protocolPath();
 }

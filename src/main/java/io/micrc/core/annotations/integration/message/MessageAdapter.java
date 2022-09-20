@@ -1,9 +1,9 @@
-package io.micrc.core.annotations.integration;
+package io.micrc.core.annotations.integration.message;
 
 import java.lang.annotation.*;
 
 /**
- * 业务服务适配器注解
+ * 消息适配器注解
  *
  * @author tengwang
  * @date 2022/9/5 10:45
@@ -12,8 +12,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
-public @interface CommandAdapter {
-
+public @interface MessageAdapter {
 
     /**
      * 是否启用自定义实现
@@ -27,14 +26,21 @@ public @interface CommandAdapter {
      *
      * @return
      */
-    String routeProtocol() default "command";
+    String routeProtocol() default "message";
 
     /**
-     * 应用服务名称 - 类简写名(SimpleName)
+     * 交换区名称 - 发送方根实体名称
      *
      * @return
      */
-    String serviceName();
+    String exchangeName();
+
+    /**
+     * 逻辑名 - 应用服务类简写名(SimpleName)去除Service
+     *
+     * @return
+     */
+    String logicName();
 
     /**
      * 执行根实体
@@ -44,16 +50,16 @@ public @interface CommandAdapter {
     String rootEntityName();
 
     /**
-     * 该业务服务适配时所含概念
+     * 事件名称
      *
      * @return
      */
-    Conception[] conceptions() default {};
+    String eventName();
 
     /**
-     * 对外提供服务的协议文件
+     * 是否顺序消费
      *
      * @return
      */
-    String protocolPath();
+    boolean ordered() default false;
 }
