@@ -17,6 +17,13 @@ public @interface Operation {
     OperateParam[] operateParams();
 
     /**
+     * 逻辑名称，指定DMN名称
+     *
+     * @return
+     */
+    String logicName();
+
+    /**
      * 参数名称，即运算结果对应的键名称
      *
      * @return
