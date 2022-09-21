@@ -22,11 +22,11 @@ public @interface PresentationsAdapter {
     String serviceName();
 
     /**
-     * 协议类型
+     * 协议类型 - 适配器路由
      *
      * @return
      */
-    String routeProtocol() default "presentations";
+    String routeProtocol() default "query";
 
     /**
      * 自定义

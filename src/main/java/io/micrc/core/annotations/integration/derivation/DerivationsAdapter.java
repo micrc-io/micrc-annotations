@@ -22,11 +22,11 @@ public @interface DerivationsAdapter {
     String serviceName();
 
     /**
-     * 协议类型
+     * 协议类型 - 适配器路由
      *
      * @return
      */
-    String routeProtocol() default "derivations";
+    String routeProtocol() default "operate";
 
     /**
      * 自定义
