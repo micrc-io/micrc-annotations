@@ -13,6 +13,14 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Documented
 public @interface BusinessesService {
+
+    /**
+     * 仓库完整类名称，用于获取ID值对象名称
+     *
+     * @return
+     */
+    String repositoryFullClassName();
+
     /**
      * 是否启用自定义实现
      *
