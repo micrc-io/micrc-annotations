@@ -33,5 +33,5 @@ public @interface CommandLogic {
      *
      * @return
      */
-    String targetIdPath() default "";
+    String targetIdPath() default "/embeddedIdentity";
 }
