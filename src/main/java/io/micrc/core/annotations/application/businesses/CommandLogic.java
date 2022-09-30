@@ -34,4 +34,11 @@ public @interface CommandLogic {
      * @return
      */
     String targetIdPath() default "/embeddedIdentity";
+
+    /**
+     * 仓库完整类名称，用于获取ID值对象名称
+     *
+     * @return
+     */
+    String repositoryFullClassName();
 }

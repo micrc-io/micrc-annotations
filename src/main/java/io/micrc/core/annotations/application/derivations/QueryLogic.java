@@ -47,14 +47,14 @@ public @interface QueryLogic {
      *
      * @return
      */
-    long pageSize() default 0L;
+    int pageSize() default 0;
 
     /**
      * 分页编码
      *
      * @return
      */
-    long pageNumber() default 0L;
+    int pageNumber() default 0;
 
     /**
      * 参数名称，即集成结果对应的键名称
