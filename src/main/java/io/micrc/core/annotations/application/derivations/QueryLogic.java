@@ -43,18 +43,18 @@ public @interface QueryLogic {
     SortParam[] sorts() default {};
 
     /**
-     * 分页大小
+     * 分页大小路径
      *
      * @return
      */
-    int pageSize() default 0;
+    String pageSizePath() default "/page/pageSize";
 
     /**
-     * 分页编码
+     * 分页页码路径
      *
      * @return
      */
-    int pageNumber() default 0;
+    String pageNumberPath() default "/page/pageNumber";
 
     /**
      * 参数名称，即集成结果对应的键名称
