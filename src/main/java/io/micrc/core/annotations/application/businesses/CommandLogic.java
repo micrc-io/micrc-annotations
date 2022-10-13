@@ -41,11 +41,4 @@ public @interface CommandLogic {
      * @return
      */
     String repositoryFullClassName();
-
-    /**
-     * 是否批量操作
-     *
-     * @return
-     */
-    boolean batch() default false;
 }
