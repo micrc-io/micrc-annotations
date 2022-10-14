@@ -29,13 +29,6 @@ public @interface CommandLogic {
     TargetMapping[] toTargetMappings();
 
     /**
-     * command的target的集成Id的位置,根为command
-     *
-     * @return
-     */
-    String targetIdPath() default "/embeddedIdentity";
-
-    /**
      * 仓库完整类名称，用于获取ID值对象名称
      *
      * @return
