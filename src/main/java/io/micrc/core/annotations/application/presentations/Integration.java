@@ -26,6 +26,13 @@ public @interface Integration {
     String protocol();
 
     /**
+     * 集成参数映射
+     *
+     * @return
+     */
+    IntegrationMapping[] integrationMapping();
+
+    /**
      * 参数名称，即集成结果对应的存储名称
      *
      * @return

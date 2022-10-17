@@ -22,6 +22,13 @@ public @interface DeriveIntegration {
     String protocolPath();
 
     /**
+     * 集成参数映射
+     *
+     * @return
+     */
+    IntegrationMapping[] integrationMapping();
+
+    /**
      * 参数处理顺序,优化处理速度
      *
      * @return
