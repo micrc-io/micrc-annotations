@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  * @since 0.0.1
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.ANNOTATION_TYPE)
+@Target(ElementType.TYPE)
 @Documented
 public @interface TimeParam {
 
