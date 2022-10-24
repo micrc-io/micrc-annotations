@@ -33,6 +33,13 @@ public @interface DerivationsService {
     Operation[] operations() default {};
 
     /**
+     * 执行操作
+     *
+     * @return
+     */
+    Execution[] executions() default {};
+
+    /**
      * 汇编器，汇总查询结果返回
      *
      * @return
