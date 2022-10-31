@@ -1,8 +1,5 @@
 package io.micrc.core.annotations.application.derivations;
 
-import io.micrc.core.annotations.application.presentations.QueryParam;
-import io.micrc.core.annotations.application.presentations.SortParam;
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

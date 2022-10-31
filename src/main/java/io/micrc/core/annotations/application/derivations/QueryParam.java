@@ -26,13 +26,6 @@ public @interface QueryParam {
     String belongConcept();
 
     /**
-     * 参数名称
-     *
-     * @return
-     */
-    String name();
-
-    /**
      * 参数取值所在路径
      *
      * @return

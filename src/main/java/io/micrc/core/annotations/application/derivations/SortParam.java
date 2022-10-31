@@ -26,13 +26,6 @@ public @interface SortParam {
     String belongConcept();
 
     /**
-     * 参数名称
-     *
-     * @return
-     */
-    String name();
-
-    /**
      * 该参数排序类型
      *
      * @return
