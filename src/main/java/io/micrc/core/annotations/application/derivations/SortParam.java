@@ -23,7 +23,7 @@ public @interface SortParam {
      *
      * @return
      */
-    String belongConcept() default "";
+    String belongConcept();
 
     /**
      * 参数名称
