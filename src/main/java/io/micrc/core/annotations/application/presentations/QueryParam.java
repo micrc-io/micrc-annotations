@@ -19,13 +19,6 @@ import java.lang.annotation.Target;
 public @interface QueryParam {
 
     /**
-     * 当前参数所属概念
-     *
-     * @return
-     */
-    String belongConcept();
-
-    /**
      * 参数取值所在路径
      *
      * @return

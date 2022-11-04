@@ -61,6 +61,13 @@ public @interface QueryLogic {
     String name();
 
     /**
+     * 方法名
+     *
+     * @return
+     */
+    String methodName();
+
+    /**
      * 参数处理顺序,优化处理速度
      *
      * @return
