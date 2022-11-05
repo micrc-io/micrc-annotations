@@ -17,11 +17,18 @@ public @interface Execution {
     ExecuteParam[] executeParams();
 
     /**
-     * 执行路由
+     * 路由内容路径
      *
      * @return
      */
-    String routePath();
+    String routeContentPath();
+
+    /**
+     * 路由ID路径
+     *
+     * @return
+     */
+    String routeIdPath();
 
     /**
      * 参数名称，即运算结果对应的键名称
