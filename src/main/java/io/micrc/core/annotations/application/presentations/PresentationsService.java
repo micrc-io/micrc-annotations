@@ -45,4 +45,11 @@ public @interface PresentationsService {
      * @return
      */
     boolean custom() default false;
+
+    /**
+     * 协议类型
+     *
+     * @return
+     */
+    String routeProtocol() default "presentations";
 }

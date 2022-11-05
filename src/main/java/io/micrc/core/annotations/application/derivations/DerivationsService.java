@@ -52,4 +52,11 @@ public @interface DerivationsService {
      * @return
      */
     boolean custom() default false;
+
+    /**
+     * 协议类型
+     *
+     * @return
+     */
+    String routeProtocol() default "derivations";
 }
