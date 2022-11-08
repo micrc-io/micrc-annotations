@@ -43,12 +43,12 @@ public @interface CommandAdapter {
      */
     String rootEntityName();
 
-    /**
-     * 该业务服务适配时所含概念
-     *
-     * @return
-     */
-    Conception[] conceptions() default {};
+//    /**
+//     * 该业务服务适配时所含概念
+//     *
+//     * @return
+//     */
+//    Conception[] conceptions() default {};
 
     /**
      * 对外提供服务的协议文件
