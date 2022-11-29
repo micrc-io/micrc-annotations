@@ -28,4 +28,11 @@ public @interface EventMapping {
      */
     String mappingPath();
 
+    /**
+     * 接收方地址
+     *
+     * @return
+     */
+    String receiverAddress();
+
 }
