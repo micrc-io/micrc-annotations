@@ -1,4 +1,4 @@
-package io.micrc.core.annotations.message;
+package io.micrc.core.annotations.message.rabbit;
 
 import java.lang.annotation.*;
 
