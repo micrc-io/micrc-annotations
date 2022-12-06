@@ -2,11 +2,10 @@ plugins {
     id 'java'
     id 'idea'
     id 'maven-publish'
-    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 group 'io.micrc.core'
-version '0.0.1'
+version 'v0.0.1'
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
@@ -14,14 +13,10 @@ jar.enabled = true
 
 repositories {
     mavenLocal()
-    mavenCentral()
     maven {
-        url "${colibri_nexus}"
-        credentials {
-            username "${colibri_nexus_user}"
-            password "${colibri_nexus_pass}"
-        }
+        url "${ouxxa_nexus}"
     }
+    mavenCentral()
 }
 
 dependencies {
@@ -30,19 +25,20 @@ dependencies {
 // 执行publishToMavenLocal后，其他库可正常引入
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        colibri(MavenPublication) {
             from components.java
         }
     }
-}
 
-nexusPublishing {
     repositories {
-        create("colibri") {
-            nexusUrl.set(uri("${colibri_nexus}"))
-            snapshotRepositoryUrl.set(uri("${colibri_nexus}"))
-            username.set("${colibri_nexus_user}")
-            password.set("${colibri_nexus_pass}")
+        maven {
+            name = 'colibriNexus'
+            url = uri("${colibri_nexus}")
+            println 'publish to ' + url
+            credentials {
+                username = "${colibri_nexus_user}"
+                password = "${colibri_nexus_pass}"
+            }
         }
     }
 }
