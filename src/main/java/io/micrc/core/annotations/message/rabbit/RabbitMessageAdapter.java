@@ -1,4 +1,4 @@
-package io.micrc.core.annotations.integration.message;
+package io.micrc.core.annotations.message.rabbit;
 
 import java.lang.annotation.*;
 
@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
-public @interface MessageAdapter {
+public @interface RabbitMessageAdapter {
 
     /**
      * 是否启用自定义实现

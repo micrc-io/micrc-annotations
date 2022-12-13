@@ -1,4 +1,4 @@
-package io.micrc.core.annotations.application.businesses;
+package io.micrc.core.annotations.message.rabbit;
 
 import java.lang.annotation.*;
 
@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.ANNOTATION_TYPE)
 @Documented
-public @interface Event {
+public @interface RabbitEvent {
 
     /**
      * 事件名称
