@@ -34,11 +34,4 @@ public @interface DeriveIntegration {
      * @return
      */
     int order() default Integer.MAX_VALUE;
-
-    /**
-     * 对象图路径
-     *
-     * @return
-     */
-    String objectTreePath() default "/";
 }
