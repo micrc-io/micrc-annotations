@@ -7,7 +7,7 @@ package io.micrc.core.annotations.application.derivations;
  * @date 2022/10/24 14:32
  * @since 0.0.1
  */
-public @interface ExecuteParam {
+public @interface TechnologyParam {
 
     /**
      * 字段名称

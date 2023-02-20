@@ -1,20 +1,16 @@
 package io.micrc.core.annotations.application.derivations;
 
 /**
- * 执行逻辑
- *
- * @author hyosunghan
- * @date 2022/10/24 14:32
- * @since 0.0.1
+ * 通用技术
  */
-public @interface Execution {
+public @interface GeneralTechnology {
 
     /**
      * 执行入参
      *
      * @return
      */
-    ExecuteParam[] executeParams();
+    TechnologyParam[] technologyParams();
 
     /**
      * 路由内容路径
@@ -22,13 +18,6 @@ public @interface Execution {
      * @return
      */
     String routeContentPath();
-
-    /**
-     * 路由ID路径
-     *
-     * @return
-     */
-    String routeIdPath();
 
     /**
      * 参数名称，即运算结果对应的键名称

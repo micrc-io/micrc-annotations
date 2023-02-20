@@ -33,11 +33,18 @@ public @interface DerivationsService {
     Operation[] operations() default {};
 
     /**
-     * 执行操作
+     * 通用技术
      *
      * @return
      */
-    Execution[] executions() default {};
+    GeneralTechnology[] generalTechnologies() default {};
+
+    /**
+     * 专用技术
+     *
+     * @return
+     */
+    SpecialTechnology[] specialTechnologies() default {};
 
     /**
      * 汇编器，汇总查询结果返回
