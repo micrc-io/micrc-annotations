@@ -34,4 +34,11 @@ public @interface CommandLogic {
      * @return
      */
     String repositoryFullClassName();
+
+    /**
+     * 逻辑执行类型,默认为DMN
+     *
+     * @return
+     */
+    LogicType logicType() default LogicType.DMN;
 }
