@@ -17,7 +17,13 @@ public @interface GeneralTechnology {
      *
      * @return
      */
-    String routeContentPath();
+    String routeContentPath() default "";
+
+    /**
+     * 路由文件路径
+     * @return
+     */
+    String routeXmlFilePath() default "";
 
     /**
      * 参数名称，即运算结果对应的键名称
