@@ -41,4 +41,6 @@ public @interface CommandLogic {
      * @return
      */
     LogicType logicType() default LogicType.DMN;
+
+    String logicPath() default "";
 }
