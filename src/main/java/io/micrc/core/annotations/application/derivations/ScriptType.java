@@ -4,7 +4,9 @@ public enum ScriptType {
 
     DMN,
 
-    GROOVY_SHELL,
+    GROOVY,
 
-    CAMEL_ROUTE
+    ROUTE,
+
+    JSLT
 }
