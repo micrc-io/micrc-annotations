@@ -30,7 +30,7 @@ public @interface GeneralTechnology {
      *
      * @return
      */
-    ScriptType scriptType() default ScriptType.CAMEL_ROUTE;
+    ScriptType scriptType() default ScriptType.ROUTE;
 
     /**
      * 参数名称，即运算结果对应的键名称
