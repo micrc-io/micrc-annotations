@@ -13,17 +13,24 @@ public @interface GeneralTechnology {
     TechnologyParam[] technologyParams();
 
     /**
-     * 路由内容路径
+     * 脚本内容路径
      *
      * @return
      */
-    String routeContentPath() default "";
+    String scriptContentPath() default "";
 
     /**
-     * 路由文件路径
+     * 脚本文件路径
      * @return
      */
-    String routeXmlFilePath() default "";
+    String scriptDocumentPath() default "";
+
+    /**
+     * 脚本类型
+     *
+     * @return
+     */
+    ScriptType scriptType() default ScriptType.CAMEL_ROUTE;
 
     /**
      * 参数名称，即运算结果对应的键名称

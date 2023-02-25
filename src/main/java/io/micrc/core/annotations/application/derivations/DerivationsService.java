@@ -26,13 +26,6 @@ public @interface DerivationsService {
     QueryLogic[] queryLogics() default {};
 
     /**
-     * 运算操作
-     *
-     * @return
-     */
-    Operation[] operations() default {};
-
-    /**
      * 通用技术
      *
      * @return
