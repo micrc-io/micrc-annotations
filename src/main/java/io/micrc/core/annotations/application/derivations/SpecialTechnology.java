@@ -10,14 +10,16 @@ public @interface SpecialTechnology {
      *
      * @return
      */
-    TechnologyParam[] technologyParams();
+    TechnologyParam[] technologyParams() default {};
+
+    TechnologyParam[] technologyHeaders() default {};
 
     /**
-     * 路由协议
+     * 技术类型
      *
      * @return
      */
-    String routeProtocol();
+    TechnologyType technologyType();
 
     /**
      * 参数名称，即运算结果对应的键名称

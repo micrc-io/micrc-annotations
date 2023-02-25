@@ -10,27 +10,22 @@ public @interface GeneralTechnology {
      *
      * @return
      */
-    TechnologyParam[] technologyParams();
+    TechnologyParam[] technologyParams() default {};
+
+    TechnologyParam[] technologyHeaders() default {};
 
     /**
-     * 脚本内容路径
+     * 路由内容路径
      *
      * @return
      */
-    String scriptContentPath() default "";
+    String routeContentPath() default "";
 
     /**
-     * 脚本文件路径
+     * 路由文件路径
      * @return
      */
-    String scriptDocumentPath() default "";
-
-    /**
-     * 脚本类型
-     *
-     * @return
-     */
-    ScriptType scriptType() default ScriptType.ROUTE;
+    String routeXmlFilePath() default "";
 
     /**
      * 参数名称，即运算结果对应的键名称
