@@ -2,19 +2,13 @@ package io.micrc.core.annotations.application.derivations;
 
 public enum TechnologyType {
 
-    DMN("dynamic-dmn://execute"),
+    DMN,
 
-    GROOVY("dynamic-groovy://execute"),
+    GROOVY,
 
-    JSLT("dynamic-jslt://execute");
+    JSLT,
 
-    private String protocol;
+    ROUTE,
 
-    public String getProtocol() {
-        return protocol;
-    }
-
-    TechnologyType(String protocol) {
-        this.protocol = protocol;
-    }
+    TEST,
 }
