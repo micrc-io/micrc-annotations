@@ -12,7 +12,18 @@ public @interface SpecialTechnology {
      */
     TechnologyParam[] technologyParams() default {};
 
-    TechnologyParam[] technologyHeaders() default {};
+    /**
+     * 路由内容路径
+     *
+     * @return
+     */
+    String scriptContentPath() default "";
+
+    /**
+     * 路由文件路径
+     * @return
+     */
+    String scriptFilePath() default "";
 
     /**
      * 技术类型

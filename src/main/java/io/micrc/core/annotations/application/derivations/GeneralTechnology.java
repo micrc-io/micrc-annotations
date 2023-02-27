@@ -12,8 +12,6 @@ public @interface GeneralTechnology {
      */
     TechnologyParam[] technologyParams() default {};
 
-    TechnologyParam[] technologyHeaders() default {};
-
     /**
      * 路由内容路径
      *
