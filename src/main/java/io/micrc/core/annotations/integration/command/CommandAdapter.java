@@ -14,6 +14,19 @@ import java.lang.annotation.*;
 @Documented
 public @interface CommandAdapter {
 
+    /**
+     * 请求映射文件
+     *
+     * @return
+     */
+    String requestMappingFile() default "";
+
+    /**
+     * 响应映射文件
+     *
+     * @return
+     */
+    String responseMappingFile() default "";
 
     /**
      * 是否启用自定义实现

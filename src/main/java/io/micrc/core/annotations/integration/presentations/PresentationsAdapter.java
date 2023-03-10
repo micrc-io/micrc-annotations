@@ -15,6 +15,20 @@ import java.lang.annotation.*;
 public @interface PresentationsAdapter {
 
     /**
+     * 请求映射文件
+     *
+     * @return
+     */
+    String requestMappingFile() default "";
+
+    /**
+     * 响应映射文件
+     *
+     * @return
+     */
+    String responseMappingFile() default "";
+
+    /**
      * 服务名称，指定提供服务的类名
      *
      * @return
