@@ -26,11 +26,18 @@ public @interface Integration {
     String protocol();
 
     /**
-     * 集成参数映射
+     * 请求映射文件
      *
      * @return
      */
-    IntegrationMapping[] integrationMapping();
+    String requestMappingFile() default "";
+
+    /**
+     * 响应映射文件
+     *
+     * @return
+     */
+    String responseMappingFile() default "";
 
     /**
      * 参数名称，即集成结果对应的存储名称
