@@ -22,11 +22,18 @@ public @interface DeriveIntegration {
     String protocolPath();
 
     /**
-     * 集成参数映射
+     * 请求映射文件
      *
      * @return
      */
-    IntegrationMapping[] integrationMapping();
+    String requestMappingFile() default "";
+
+    /**
+     * 响应映射文件
+     *
+     * @return
+     */
+    String responseMappingFile() default "";
 
     /**
      * 参数处理顺序,优化处理速度
