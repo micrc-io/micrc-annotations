@@ -26,32 +26,11 @@ public @interface QueryLogic {
     String aggregation();
 
     /**
-     * 查询参数，本次查询所需参数，包括参数名及参数路径
+     * 参数映射文件
      *
      * @return
      */
-    QueryParam[] params() default {};
-
-    /**
-     * 排序参数，查询时使用的排序参数，包括参数名和排序方式
-     *
-     * @return
-     */
-    SortParam[] sorts() default {};
-
-    /**
-     * 分页大小路径
-     *
-     * @return
-     */
-    String pageSizePath() default "/page/pageSize";
-
-    /**
-     * 分页页码路径
-     *
-     * @return
-     */
-    String pageNumberPath() default "/page/pageNumber";
+    String[] paramMappingFile() default {};
 
     /**
      * 参数名称，即集成结果对应的键名称
