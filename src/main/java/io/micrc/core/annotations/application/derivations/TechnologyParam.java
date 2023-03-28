@@ -17,9 +17,9 @@ public @interface TechnologyParam {
     String name();
 
     /**
-     * 字段路径 - 入参取值路径
+     * 参数映射文件
      *
      * @return
      */
-    String path();
+    String paramMappingFile();
 }
