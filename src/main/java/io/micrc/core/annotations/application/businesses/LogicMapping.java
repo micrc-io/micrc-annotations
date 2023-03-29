@@ -22,9 +22,9 @@ public @interface LogicMapping {
     String name();
 
     /**
-     * 映射值 - jsonpath
+     * 映射文件
      *
      * @return
      */
-    String mapping();
+    String paramMappingFile();
 }

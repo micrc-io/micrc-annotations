@@ -19,12 +19,12 @@ public @interface TargetMapping {
      *
      * @return
      */
-    String name();
+    String path();
 
     /**
-     * 映射值 - jsonpoint
+     * 映射文件
      *
      * @return
      */
-    String mapping();
+    String paramMappingFile();
 }
