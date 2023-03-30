@@ -19,11 +19,11 @@ import java.lang.annotation.Target;
 public @interface QueryLogic {
 
     /**
-     * 查询聚合，用于拼接"xxxRepository"
+     * 仓库全类名
      *
      * @return
      */
-    String aggregation();
+    String repositoryFullClassName();
 
     /**
      * 参数映射文件
