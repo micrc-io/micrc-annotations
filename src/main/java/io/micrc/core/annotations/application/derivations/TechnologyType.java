@@ -12,5 +12,15 @@ public enum TechnologyType {
 
     TEST,
 
-    LOGIN,
+    /**
+     * 认证
+     * username:xxx,permissions:[xxx]
+     */
+    AUTHENTICATION,
+
+    /**
+     * 撤销认证
+     * username:xxx
+     */
+    DECERTIFICATION
 }
