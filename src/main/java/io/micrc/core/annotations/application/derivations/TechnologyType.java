@@ -11,4 +11,6 @@ public enum TechnologyType {
     ROUTE,
 
     TEST,
+
+    LOGIN,
 }
