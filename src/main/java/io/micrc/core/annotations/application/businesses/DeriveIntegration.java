@@ -36,6 +36,12 @@ public @interface DeriveIntegration {
     String responseMappingFile() default "";
 
     /**
+     * 批处理标记
+     *
+     */
+    boolean batchFlag() default false;
+
+    /**
      * 参数处理顺序,优化处理速度
      *
      * @return
