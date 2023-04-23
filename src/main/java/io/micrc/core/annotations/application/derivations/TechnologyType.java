@@ -10,8 +10,6 @@ public enum TechnologyType {
 
     ROUTE,
 
-    TEST,
-
     /**
      * 认证
      * username:xxx,permissions:[xxx]
@@ -22,5 +20,16 @@ public enum TechnologyType {
      * 撤销认证
      * username:xxx
      */
-    DECERTIFICATION
+    DECERTIFICATION,
+
+    /**
+     * PBKDF2加密
+     * data:xxx,salt:xxx
+     */
+    PBKDF2_ENCRYPT,
+
+    /**
+     * 生成盐
+     */
+    GENERATE_SALT,
 }
