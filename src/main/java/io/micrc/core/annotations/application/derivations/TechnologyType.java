@@ -12,19 +12,19 @@ public enum TechnologyType {
 
     /**
      * 认证
-     * username:xxx,permissions:[xxx]
+     * {username:{username:xxx},permissions:[xxx,xxx]}
      */
     AUTHENTICATION,
 
     /**
      * 撤销认证
-     * username:xxx
+     * {username:{username:xxx}}
      */
     DECERTIFICATION,
 
     /**
      * PBKDF2加密
-     * data:xxx,salt:xxx
+     * {password:{password:xxx},salt:{salt:xxx}}
      */
     PBKDF2_ENCRYPT,
 
