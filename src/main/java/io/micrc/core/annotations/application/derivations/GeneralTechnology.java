@@ -6,11 +6,11 @@ package io.micrc.core.annotations.application.derivations;
 public @interface GeneralTechnology {
 
     /**
-     * 执行入参
+     * 参数映射文件
      *
      * @return
      */
-    TechnologyParam[] technologyParams() default {};
+    String paramMappingFile();
 
     /**
      * 路由内容路径
