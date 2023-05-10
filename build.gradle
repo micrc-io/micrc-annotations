@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.micrc.core'
-version 'v0.0.1-20230426-3'
+version 'v0.0.1'
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
@@ -13,9 +13,6 @@ jar.enabled = true
 
 repositories {
     mavenLocal()
-    maven {
-        url "${ouxxa_nexus}"
-    }
     mavenCentral()
 }
 
@@ -24,20 +21,13 @@ dependencies {
 
 // 执行publishToMavenLocal后，其他库可正常引入
 publishing {
-    publications {
-        colibri(MavenPublication) {
-            from components.java
-        }
-    }
-
     repositories {
         maven {
-            name = 'colibriNexus'
-            url = uri("${colibri_nexus}")
-            println 'publish to ' + url
+            name = 'Github-Packages'
+            url = uri("https://maven.pkg.github.com/micrc-io/micrc-annotations")
             credentials {
-                username = "${colibri_nexus_user}"
-                password = "${colibri_nexus_pass}"
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
