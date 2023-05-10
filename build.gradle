@@ -19,16 +19,16 @@ repositories {
 dependencies {
 }
 
-// 执行publishToMavenLocal后，其他库可正常引入
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier = 'sources'
+}
+
 publishing {
-    repositories {
-        maven {
-            name = 'Github-Packages'
-            url = uri("https://maven.pkg.github.com/micrc-io/micrc-annotations")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
         }
     }
 }
