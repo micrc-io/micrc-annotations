@@ -2,10 +2,11 @@ plugins {
     id 'java'
     id 'idea'
     id 'maven-publish'
+    id 'signing'
 }
 
 group 'io.micrc.core'
-version 'v0.0.3'
+version 'v0.0.1'
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
@@ -24,11 +25,61 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
+javadoc {
+    options {
+        encoding 'UTF-8'
+        charSet 'UTF-8'
+    }
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
             artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'Micrc Annotations'
+                description = 'Micrc Independent Annotation Library'
+                url = 'https://github.com/micrc-io/micrc-annotations'
+                licenses {
+                    license {
+                        name = 'The MIT License (MIT)'
+                        url = 'https://www.mit-license.org/'
+                    }
+                }
+                developers {
+                    developer {
+                        name = 'micrc'
+                        email = 'operator@ttyys.io'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/micrc-io/micrc-annotations'
+                    connection = 'scm:git@https://github.com/micrc-io/micrc-annotations.git'
+                    developerConnection = 'scm:git@https://github.com/micrc-io/micrc-annotations.git'
+                }
+            }
         }
     }
+    repositories {
+        mavenCentral {
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username System.getenv('OSSRH_USERNAME')
+                password System.getenv('OSSRH_PASSWORD')
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }
