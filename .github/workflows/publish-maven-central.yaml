@@ -19,15 +19,18 @@ jobs:
       - name: Setup build cache
         uses: actions/cache@v3
         with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
-            ${{ runner.os }}-gradle
+            ${{ runner.os }}-gradle-
 
       - name: Setup GPG signing secret key ring file
         env:
           SIGNING_PRIVATE_KEY: ${{ secrets.SIGNING_PRIVATE_KEY }}
         run: |
+          mkdir ~/.gradle
           echo "$SIGNING_PRIVATE_KEY" > ~/.gradle/signing-secret-key.gpg.base64
           base64 -d ~/.gradle/signing-secret-key.gpg.base64 > ~/.gradle/signing-secret-key.gpg
 
