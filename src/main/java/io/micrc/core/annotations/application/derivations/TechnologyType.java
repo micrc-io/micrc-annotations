@@ -12,19 +12,19 @@ public enum TechnologyType {
 
     /**
      * 认证
-     * {username:{username:xxx},permissions:[xxx,xxx]}
+     * {username:xxx,permissions:[xxx,xxx]}
      */
     AUTHENTICATION,
 
     /**
      * 撤销认证
-     * {username:{username:xxx}}
+     * {username:xxx}
      */
     DECERTIFICATION,
 
     /**
      * PBKDF2加密
-     * {password:{password:xxx},salt:{salt:xxx}}
+     * {password:xxx,salt:xxx}
      */
     PBKDF2_ENCRYPT,
 
@@ -32,4 +32,15 @@ public enum TechnologyType {
      * 生成盐
      */
     GENERATE_SALT,
+
+    /**
+     * 生成验证码
+     */
+    GENERATE_VERIFY_CODE,
+
+    /**
+     * 比较验证码
+     * {key:xxx,value:xxx}
+     */
+    COMPARE_VERIFY_CODE,
 }
