@@ -43,4 +43,9 @@ public enum TechnologyType {
      * {key:xxx,value:xxx}
      */
     COMPARE_VERIFY_CODE,
+
+    /**
+     * 获取激活配置
+     */
+    GET_ACTIVE_PROFILES,
 }
