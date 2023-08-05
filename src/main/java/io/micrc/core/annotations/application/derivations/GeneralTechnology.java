@@ -6,6 +6,13 @@ package io.micrc.core.annotations.application.derivations;
 public @interface GeneralTechnology {
 
     /**
+     * 变量映射文件
+     *
+     * @return
+     */
+    String variableMappingFile() default "";
+
+    /**
      * 参数映射文件
      *
      * @return
