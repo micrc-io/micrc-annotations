@@ -52,4 +52,11 @@ public @interface Integration {
      * @return
      */
     int order() default Integer.MAX_VALUE;
+
+    /**
+     * 参数不存在则忽略
+     *
+     * @return
+     */
+    boolean ignoreIfParamAbsent() default false;
 }

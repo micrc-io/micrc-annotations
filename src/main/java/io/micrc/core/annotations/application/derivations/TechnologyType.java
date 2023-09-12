@@ -12,13 +12,13 @@ public enum TechnologyType {
 
     /**
      * 认证
-     * {username:xxx,permissions:[xxx,xxx]}
+     * {identity:xxx,permissions:[xxx,xxx]}
      */
     AUTHENTICATION,
 
     /**
      * 撤销认证
-     * {username:xxx}
+     * {identity:xxx}
      */
     DECERTIFICATION,
 
