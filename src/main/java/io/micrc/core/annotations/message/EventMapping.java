@@ -35,4 +35,10 @@ public @interface EventMapping {
      */
     String receiverAddress();
 
+    /**
+     * 批量模型
+     *
+     * @return
+     */
+    String batchModel() default "";
 }
