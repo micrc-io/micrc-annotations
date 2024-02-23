@@ -51,6 +51,7 @@ public enum TechnologyType {
 
     /**
      * 替换模板key
+     * {template:xxx,value:{xxx:xxx}}
      */
     REPLACE_TEMPLATE_KEY
 }
