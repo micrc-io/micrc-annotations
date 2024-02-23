@@ -48,4 +48,9 @@ public enum TechnologyType {
      * 获取激活配置
      */
     GET_ACTIVE_PROFILES,
+
+    /**
+     * 替换模板key
+     */
+    REPLACE_TEMPLATE_KEY
 }
