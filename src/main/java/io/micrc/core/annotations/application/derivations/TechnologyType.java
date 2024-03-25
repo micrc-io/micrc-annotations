@@ -8,6 +8,8 @@ public enum TechnologyType {
 
     JSLT,
 
+    XPATH,
+
     ROUTE,
 
     /**
