@@ -30,16 +30,9 @@ public @interface MessageAdapter {
 
 
     /**
-     * 业务服务全路径
+     * 业务服务全路径 和 事件名称组
      *
      * @return
      */
-    String commandServicePath();
-
-    /**
-     * 事件名称
-     *
-     * @return
-     */
-    String eventName();
+    Adapter[] value() default {};
 }

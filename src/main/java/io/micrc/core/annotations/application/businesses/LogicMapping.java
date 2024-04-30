@@ -17,14 +17,14 @@ public @interface LogicMapping {
     /**
      * 映射键
      *
-     * @return
+     * @return string
      */
     String name();
 
     /**
      * 映射文件
      *
-     * @return
+     * @return string
      */
     String paramMappingFile();
 }

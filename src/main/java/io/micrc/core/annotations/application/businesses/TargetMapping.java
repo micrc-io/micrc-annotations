@@ -17,14 +17,14 @@ public @interface TargetMapping {
     /**
      * 映射键
      *
-     * @return
+     * @return string
      */
     String path();
 
     /**
      * 映射文件
      *
-     * @return
+     * @return string
      */
     String paramMappingFile();
 }

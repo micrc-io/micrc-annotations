@@ -22,7 +22,7 @@ public @interface TimeParam {
      * 时间路径, 列表下标用*表示，模糊键值用#表示（eg:Map的键）
      * eg:/a/b/*, /a/b/#
      *
-     * @return
+     * @return String[]
      */
     String[] paths() default {};
 }
