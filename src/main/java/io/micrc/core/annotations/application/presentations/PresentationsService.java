@@ -21,35 +21,35 @@ public @interface PresentationsService {
     /**
      * 查询逻辑，查询当前所在聚合
      *
-     * @return
+     * @return QueryLogic
      */
     QueryLogic[] queryLogics() default {};
 
     /**
      * 集成，通过open-api查询其他聚合/上下文
      *
-     * @return
+     * @return  Integration
      */
     Integration[] integrations() default {};
 
     /**
      * 汇编器，汇总查询结果返回
      *
-     * @return
+     * @return String
      */
     String assembler();
 
     /**
      * 自定义
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 协议类型
      *
-     * @return
+     * @return String
      */
     String routeProtocol() default "presentations";
 }

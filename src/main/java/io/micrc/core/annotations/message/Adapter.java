@@ -9,21 +9,21 @@ public @interface Adapter {
     /**
      * 业务服务全路径
      *
-     * @return
+     * @return string
      */
     String commandServicePath();
 
     /**
      * 事件名称
      *
-     * @return
+     * @return string
      */
     String eventName();
 
     /**
      * 主题名称
      *
-     * @return
+     * @return string
      */
     String topicName();
 }

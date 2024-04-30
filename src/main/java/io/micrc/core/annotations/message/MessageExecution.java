@@ -14,5 +14,4 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Documented
 public @interface MessageExecution {
-    String value();
 }

@@ -21,42 +21,42 @@ public @interface Integration {
     /**
      * openApi协议，集成场景专用协议，参数来源于x-integrate-mapping
      *
-     * @return
+     * @return string
      */
     String protocol();
 
     /**
      * 请求映射文件
      *
-     * @return
+     * @return string
      */
     String requestMappingFile() default "";
 
     /**
      * 响应映射文件
      *
-     * @return
+     * @return string
      */
     String responseMappingFile() default "";
 
     /**
      * 参数名称，即集成结果对应的存储名称
      *
-     * @return
+     * @return string
      */
     String name();
 
     /**
      * 参数处理顺序,优化处理速度
      *
-     * @return
+     * @return int
      */
     int order() default Integer.MAX_VALUE;
 
     /**
      * 参数不存在则忽略
      *
-     * @return
+     * @return boolean
      */
     boolean ignoreIfParamAbsent() default false;
 }

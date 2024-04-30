@@ -17,28 +17,28 @@ public @interface RunnerAdapter {
     /**
      * 服务名称，指定提供服务的类名
      *
-     * @return
+     * @return String
      */
     String serviceName();
 
     /**
      * 协议类型 - 适配器路由
      *
-     * @return
+     * @return String
      */
     String routeProtocol() default "runner";
 
     /**
      * 自定义
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 执行文件地址
      *
-     * @return
+     * @return String
      */
     String executePath();
 }
