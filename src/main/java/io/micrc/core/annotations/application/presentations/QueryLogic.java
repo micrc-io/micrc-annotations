@@ -21,35 +21,35 @@ public @interface QueryLogic {
     /**
      * 仓库全类名
      *
-     * @return
+     * @return String
      */
     String repositoryFullClassName();
 
     /**
      * 参数映射文件
      *
-     * @return
+     * @return String[]
      */
     String[] paramMappingFile() default {};
 
     /**
      * 参数名称，即集成结果对应的键名称
      *
-     * @return
+     * @return String
      */
     String name();
 
     /**
      * 方法名
      *
-     * @return
+     * @return String
      */
     String methodName();
 
     /**
      * 参数处理顺序,优化处理速度
      *
-     * @return
+     * @return int
      */
     int order() default Integer.MAX_VALUE;
 }

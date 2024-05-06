@@ -17,29 +17,22 @@ public @interface MessageAdapter {
     /**
      * 是否启用自定义实现
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 协议类型
      *
-     * @return
+     * @return string
      */
     String routeProtocol() default "message";
 
 
     /**
-     * 业务服务全路径
+     * 业务服务全路径 和 事件名称组
      *
-     * @return
+     * @return adapter []
      */
-    String commandServicePath();
-
-    /**
-     * 事件名称
-     *
-     * @return
-     */
-    String eventName();
+    Adapter[] value() default {};
 }

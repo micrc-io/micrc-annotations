@@ -21,21 +21,21 @@ public @interface RepositoryIntegration {
     /**
      * ID路径
      *
-     * @return
+     * @return string
      */
     String idPath();
 
     /**
      * 参数不存在则忽略
      *
-     * @return
+     * @return boolean
      */
     boolean ignoreIfParamAbsent() default false;
 
     /**
      * 参数处理顺序,优化处理速度
      *
-     * @return
+     * @return int
      */
     int order() default Integer.MAX_VALUE;
 }

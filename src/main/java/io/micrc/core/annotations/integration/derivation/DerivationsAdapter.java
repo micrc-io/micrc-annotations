@@ -17,42 +17,42 @@ public @interface DerivationsAdapter {
     /**
      * 请求映射文件
      *
-     * @return
+     * @return string
      */
     String requestMappingFile() default "";
 
     /**
      * 响应映射文件
      *
-     * @return
+     * @return string
      */
     String responseMappingFile() default "";
 
     /**
      * 服务名称，指定提供服务的类名
      *
-     * @return
+     * @return string
      */
     String serviceName();
 
     /**
      * 协议类型 - 适配器路由
      *
-     * @return
+     * @return string
      */
     String routeProtocol() default "operate";
 
     /**
      * 自定义
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 对外提供服务的协议文件
      *
-     * @return
+     * @return string
      */
     String protocolPath();
 }

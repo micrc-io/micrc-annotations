@@ -17,49 +17,49 @@ public @interface RabbitMessageAdapter {
     /**
      * 是否启用自定义实现
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 协议类型
      *
-     * @return
+     * @return String
      */
     String routeProtocol() default "message";
 
     /**
      * 交换区名称 - 发送方根实体名称
      *
-     * @return
+     * @return String
      */
     String exchangeName();
 
     /**
      * 逻辑名 - 应用服务类简写名(SimpleName)去除Service
      *
-     * @return
+     * @return String
      */
     String logicName();
 
     /**
      * 执行根实体
      *
-     * @return
+     * @return String
      */
     String rootEntityName();
 
     /**
      * 事件名称
      *
-     * @return
+     * @return String
      */
     String eventName();
 
     /**
      * 是否顺序消费
      *
-     * @return
+     * @return boolean
      */
     boolean ordered() default false;
 }

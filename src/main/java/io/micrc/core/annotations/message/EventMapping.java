@@ -17,28 +17,28 @@ public @interface EventMapping {
     /**
      * 映射转换Key - 以对端用例英文名做key
      *
-     * @return
+     * @return string
      */
     String mappingKey();
 
     /**
      * 对端映射文件地址
      *
-     * @return
+     * @return string
      */
     String mappingPath();
 
     /**
      * 接收方地址
      *
-     * @return
+     * @return string
      */
     String receiverAddress();
 
     /**
      * 批量模型
      *
-     * @return
+     * @return string
      */
     String batchModel() default "";
 }

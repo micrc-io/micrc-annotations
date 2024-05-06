@@ -17,35 +17,35 @@ public @interface RabbitEvent {
     /**
      * 事件名称
      *
-     * @return
+     * @return String
      */
     String eventName();
 
     /**
      * 发送聚合名称-类简写名称-ExchangeName
      *
-     * @return
+     * @return String
      */
     String aggregationName();
 
     /**
      * 接收通道-channel-使用消费方LogicName
      *
-     * @return
+     * @return String
      */
     String channel();
 
     /**
      * 对端映射文件地址
      *
-     * @return
+     * @return String
      */
     String mappingPath();
 
     /**
      * 是否顺序发送
      *
-     * @return
+     * @return boolean
      */
     boolean ordered() default false;
 

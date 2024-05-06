@@ -17,28 +17,28 @@ public @interface CommandLogic {
     /**
      * 调用Logic时以Command为根的映射逻辑
      *
-     * @return
+     * @return []
      */
     LogicMapping[] toLogicMappings();
 
     /**
      * 将Logic执行结果转换至Target的
      *
-     * @return
+     * @return []
      */
     TargetMapping[] toTargetMappings();
 
     /**
      * 仓库完整类名称，用于获取ID值对象名称
      *
-     * @return
+     * @return []
      */
     String repositoryFullClassName();
 
     /**
      * 逻辑执行类型,默认为DMN
      *
-     * @return
+     * @return [
      */
     LogicType logicType() default LogicType.DMN;
 

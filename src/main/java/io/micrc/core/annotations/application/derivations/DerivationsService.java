@@ -21,42 +21,42 @@ public @interface DerivationsService {
     /**
      * 查询逻辑，查询当前所在聚合
      *
-     * @return
+     * @return queryLogic[]
      */
     QueryLogic[] queryLogics() default {};
 
     /**
      * 通用技术
      *
-     * @return
+     * @return generalTechnology[]
      */
     GeneralTechnology[] generalTechnologies() default {};
 
     /**
      * 专用技术
      *
-     * @return
+     * @return specialTechnology[]
      */
     SpecialTechnology[] specialTechnologies() default {};
 
     /**
      * 汇编器，汇总查询结果返回
      *
-     * @return
+     * @return string
      */
     String assembler();
 
     /**
      * 自定义
      *
-     * @return
+     * @return boolean
      */
     boolean custom() default false;
 
     /**
      * 协议类型
      *
-     * @return
+     * @return string
      */
     String routeProtocol() default "derivations";
 }

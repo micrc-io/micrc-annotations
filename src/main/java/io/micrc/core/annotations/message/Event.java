@@ -17,14 +17,14 @@ public @interface Event {
     /**
      * 主题名称
      *
-     * @return
+     * @return string
      */
     String topicName();
 
     /**
      * 事件名称
      *
-     * @return
+     * @return string
      */
     String eventName();
 

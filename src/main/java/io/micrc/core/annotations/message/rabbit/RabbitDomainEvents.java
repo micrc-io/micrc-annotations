@@ -17,7 +17,7 @@ public @interface RabbitDomainEvents {
     /**
      * 完成后会发出的事件类型
      *
-     * @return
+     * @return RabbitEvent[]
      */
     RabbitEvent[] events() default {};
 

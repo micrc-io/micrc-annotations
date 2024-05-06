@@ -17,14 +17,14 @@ public @interface BusinessesService {
     /**
      * 是否启用自定义实现
      *
-     * @return
+     * @return bool
      */
     boolean custom() default false;
 
     /**
      * 协议类型
      *
-     * @return
+     * @return string
      */
     String routeProtocol() default "businesses";
 }

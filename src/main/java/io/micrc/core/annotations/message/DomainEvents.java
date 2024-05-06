@@ -19,7 +19,7 @@ public @interface DomainEvents {
     /**
      * 完成后会发出的事件类型
      *
-     * @return
+     * @return event[]
      */
     Event[] events() default {};
 
